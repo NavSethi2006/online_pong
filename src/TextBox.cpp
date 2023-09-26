@@ -3,11 +3,13 @@
 
 void TextBox::InitTextBox(float x, float y) {
     
-    sprite.setTexture(textbox_tex());
+    textbox_font.loadFromFile("../src/assets/shit.ttf");
+    texture.loadFromFile("../src/assets/TextBox.png");
+    sprite.setTexture(texture);
 
     character = 0;
     text.setCharacterSize(15);
-    text.setFont(font_());
+    text.setFont(textbox_font);
     sprite.setPosition(x, y);
     text.setPosition(x + 25, y + 25);
     text.setLetterSpacing(0.9);

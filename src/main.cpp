@@ -35,7 +35,7 @@ int main() {
             }
             menu_update();
 
-            window_()->clear();
+            window_()->clear(sf::Color(41, 41, 41));
             menu_render();
             
 
@@ -49,7 +49,7 @@ int main() {
             }
             game_update();
 
-            window_()->clear();
+            window_()->clear(sf::Color(41, 41, 41));
             game_render();
 
         case STATE_PAUSE:
@@ -60,8 +60,6 @@ int main() {
             }
         }
 
-      
-        window_()->clear();
         window_()->display();
 
 

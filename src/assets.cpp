@@ -1,12 +1,12 @@
 #include "assets.h"
 
-static sf::Font font;
+sf::Font font;
 sf::Texture textbox_texture;
 
 void load_assets() {
     
-    font.loadFromFile("../src/assets/shit.ttf");
-    textbox_texture.loadFromFile("../src/assets/TextBox.png");
+    if(!font.loadFromFile("../src/assets/shit.ttf"))printf("cant load font\n");
+    if(!textbox_texture.loadFromFile("../src/assets/TextBox.png"))printf("cant load texbox texture\n");
     
 }
 

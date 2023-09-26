@@ -4,6 +4,8 @@ sf::Text Title, LocalGame, OnlineMatch, Option, Exit;
 
 TextBox textbox;
 
+sf::Font menu_font;
+
 int MenuSelection;
 
 bool changeLocal = true, changeOnline = true, changeOption = true, changeExit = true;
@@ -12,32 +14,33 @@ bool showMenu, showLocal, showOnline, showOption, showExit;
 
 void menu_init() {
     
+    menu_font.loadFromFile("../src/assets/shit.ttf");
 
     showMenu = true;
 
     MenuSelection = 1;
 
-    Title.setFont(font_());
+    Title.setFont(menu_font);
     Title.setString("Multiplayer Pong");
     Title.setCharacterSize(35);
     Title.setPosition(380, 50);
 
-    LocalGame.setFont(font_());
+    LocalGame.setFont(menu_font);
     LocalGame.setString("Local Game");
     LocalGame.setCharacterSize(20);
     LocalGame.setPosition(550, 200);
 
-    OnlineMatch.setFont(font_());
+    OnlineMatch.setFont(menu_font);
     OnlineMatch.setString("Online Match");
     OnlineMatch.setCharacterSize(20);
     OnlineMatch.setPosition(530, 300);
 
-    Option.setFont(font_());
+    Option.setFont(menu_font);
     Option.setString("Options");
     Option.setCharacterSize(20);
     Option.setPosition(580,400);
 
-    Exit.setFont(font_());
+    Exit.setFont(menu_font);
     Exit.setString("Exit");
     Exit.setCharacterSize(20);
     Exit.setPosition(610, 500);
@@ -50,10 +53,11 @@ void menu_events(sf::Event event) {
         MenuSelection--;
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
         MenuSelection++;
+    
 }
 
 void menu_update() {
-    std::cout << showMenu << std::endl;
+    printf("%f\n %f\n", mouse_x(), mouse_y);
 
     if(showMenu){
 
@@ -179,15 +183,11 @@ void menu_update() {
 }
 
 void menu_render() {
-    if(showMenu){
         window_()->draw(Title);
         window_()->draw(LocalGame);
         window_()->draw(OnlineMatch);
         window_()->draw(Option);
         window_()->draw(Exit);
         textbox.render();
-    }
-    if(showLocal){
-        
-    }
+
 }

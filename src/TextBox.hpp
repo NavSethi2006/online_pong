@@ -21,9 +21,10 @@ class TextBox{
 
 private:
     sf::RenderWindow *w;
-
+    sf::Font textbox_font;
     sf::Sprite sprite;
     sf::Text text;
+    sf::Texture texture;
     sf::Clock clock;
 
     
