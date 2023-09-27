@@ -17,7 +17,7 @@
    Create a text box that can be used to display text in a typewriter format
    
  */
-class TextBox{
+class Textbox{
 
 private:
     sf::RenderWindow *w;
@@ -37,9 +37,9 @@ public:
    @param x for the x position
    @param y for the y position
  */
-void InitTextBox(float x, float y);
+void init_textbox(float x, float y);
 /**
-   @brief logic for the typewriting effect. Cant explain since very complicated gamer
+   @brief logic for the typewriting effect. Cant explain since very complicated programming thing
    
    @param string the string for text
  */

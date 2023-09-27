@@ -2,4 +2,4 @@
 #include "SFML/Window.hpp"
 #include "window.h"
 
-bool MouseCollision(sf::Text square);
+bool mouse_collision(sf::Text square);

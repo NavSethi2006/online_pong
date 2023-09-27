@@ -8,10 +8,12 @@ void window_init() {
 
 }
 float mouse_x() {
-    return sf::Mouse::getPosition(window).x;
+    float bruh = window.mapPixelToCoords(sf::Mouse::getPosition(window)).x;
+    return bruh;
 }
 float mouse_y(){
-    return sf::Mouse::getPosition(window).y;
+    float bruh = window.mapPixelToCoords(sf::Mouse::getPosition(window)).y;
+    return bruh;
 }
 
 sf::RenderWindow *window_() {

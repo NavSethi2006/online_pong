@@ -1,7 +1,7 @@
-#include "TextBox.hpp"
+#include "textbox.h"
 
 
-void TextBox::InitTextBox(float x, float y) {
+void Textbox::init_textbox(float x, float y) {
     
     textbox_font.loadFromFile("../src/assets/shit.ttf");
     texture.loadFromFile("../src/assets/TextBox.png");
@@ -17,7 +17,7 @@ void TextBox::InitTextBox(float x, float y) {
 }
 
 
-void TextBox::update(std::string string) {
+void Textbox::update(std::string string) {
     std::string bruh;
     
     if(clock.getElapsedTime().asSeconds() > 0.01 && character < string.length()){
@@ -31,7 +31,7 @@ void TextBox::update(std::string string) {
     
 }
 
-void TextBox::render() {
+void Textbox::render() {
     window_()->draw(sprite);
     window_()->draw(text);
 }

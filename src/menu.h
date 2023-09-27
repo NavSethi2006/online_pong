@@ -11,7 +11,7 @@
 #include <SFML/Window.hpp>
 #include <iostream>
 #include "collision.h"
-#include "TextBox.hpp"
+#include "textbox.h"
 
 /**
    @brief 
