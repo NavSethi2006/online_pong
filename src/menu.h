@@ -10,6 +10,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <iostream>
+#include "main_menu.h"
 #include "collision.h"
 #include "textbox.h"
 

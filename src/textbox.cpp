@@ -16,9 +16,15 @@ void Textbox::init_textbox(float x, float y) {
     
 }
 
+void Textbox::reset(int id) {
+    if(Reset) {
+        character = 0;
+        bruh = " ";
+        Reset = false;
+    }
+}
 
-void Textbox::update(std::string string) {
-    std::string bruh;
+void Textbox::update(std::string string, int id) {
     
     if(clock.getElapsedTime().asSeconds() > 0.01 && character < string.length()){
         clock.restart();

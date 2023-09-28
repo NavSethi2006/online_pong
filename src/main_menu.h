@@ -1,3 +1,5 @@
+#pragma once
+
 #include "SFML/Graphics.hpp"
 #include "textbox.h"
 #include "collision.h"

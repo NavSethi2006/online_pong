@@ -26,6 +26,9 @@ private:
     sf::Text text;
     sf::Texture texture;
     sf::Clock clock;
+    std::string bruh;
+    bool Reset;
+    int id;
 
     
 public:
@@ -43,7 +46,10 @@ void init_textbox(float x, float y);
    
    @param string the string for text
  */
-void update(std::string string);
+
+void reset(int id);
+
+void update(std::string string, int id);
 
 /**
  * @brief call this method when you want to render the textbox
